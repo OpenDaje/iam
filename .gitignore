@@ -1,0 +1,10 @@
+.idea/
+/extra/
+/lib/fpp/*
+Makefile
+behat.yml
+/features/
+
+.php_cs.cache
+/vendor/
+/var/
