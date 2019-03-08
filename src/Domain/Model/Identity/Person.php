@@ -30,7 +30,7 @@ final class Person
         return new self($userId, $this->name);
     }
 
-    public function withName(FullName $name): Person
+    public function changeName(FullName $name): Person
     {
         return new self($this->userId, $name);
     }

@@ -52,7 +52,7 @@ class PersonTest extends TestCase
 
 
         $SUT = new Person($userId, $fullName);
-        $SUT = $SUT->withName($newFullName);
+        $SUT = $SUT->changeName($newFullName);
 
         self::assertInstanceOf(Person::class, $SUT);
         self::assertEquals($newFirstName, $SUT->name()->firstName());
