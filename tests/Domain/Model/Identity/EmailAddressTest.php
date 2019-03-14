@@ -52,4 +52,33 @@ class EmailAddressTest extends TestCase
         $this->assertFalse($first->equals($third));
         $this->assertFalse($third->equals($second));
     }
+
+    /**
+     * @test
+     * @dataProvider sanitizedEmails
+     */
+    public function it_should_sanitize_email($email, $expectedEmail)
+    {
+        $email = EmailAddress::fromString($email);
+
+        $this->assertEquals($expectedEmail, $email->toString());
+    }
+
+    public function sanitizedEmails()
+    {
+        yield 'Clean email' => ['user@example.com', 'user@example.com'];
+        yield 'Uppercase char' => ['USER@EXAMPLE.COM', 'user@example.com'];
+        yield 'Empty space before/after' => ['    USER@EXAMPLE.COM  ', 'user@example.com'];
+        yield 'Both space & uppercase' => ['    UsER@EXamPLE.coM  ', 'user@example.com'];
+    }
+
+
+    /**
+     * @test
+     * @expectedException \InvalidArgumentException
+     */
+    public function empty_email_should_throw_exception()
+    {
+        EmailAddress::fromString('');
+    }
 }

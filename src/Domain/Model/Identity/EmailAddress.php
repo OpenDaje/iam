@@ -10,7 +10,10 @@ final class EmailAddress
 
     public function __construct(string $email)
     {
-        $this->email = $email;
+        if (!$email) {
+            throw new \InvalidArgumentException('Email missing.');
+        }
+        $this->email = $this->sanitize($email);
     }
 
     public function email(): string
@@ -41,5 +44,12 @@ final class EmailAddress
     public function equals(EmailAddress $emailAddress): bool
     {
         return $this->email === $emailAddress->email;
+    }
+
+    private function sanitize(string $email): string
+    {
+        $email = strtolower(trim($email));
+
+        return $email;
     }
 }
