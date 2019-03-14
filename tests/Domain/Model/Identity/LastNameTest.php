@@ -49,4 +49,13 @@ class LastNameTest extends TestCase
         self::assertTrue($first->equals($copyOfFirst));
         self::assertFalse($second->equals($copyOfFirst));
     }
+
+    /**
+     * @test
+     * @expectedException \InvalidArgumentException
+     */
+    public function empty_lastName_should_throw_exception()
+    {
+        LastName::fromString('');
+    }
 }

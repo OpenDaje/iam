@@ -10,6 +10,9 @@ final class LastName
 
     public function __construct(string $lastName)
     {
+        if (!$lastName) {
+            throw new \InvalidArgumentException('Last name missing.');
+        }
         $this->lastName = $lastName;
     }
 
