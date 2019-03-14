@@ -54,17 +54,17 @@ class RoleNameTest extends TestCase
      * @test
      * @expectedException \InvalidArgumentException
      */
-    public function it_throw_exception_if_empty()
+    public function empty_role_name_should_throw_exception()
     {
-        $roleName = RoleName::fromString('');
+        RoleName::fromString('');
     }
 
     /**
      * @test
      * @expectedException \InvalidArgumentException
      */
-    public function it_throw_exception_if_short()
+    public function short_role_name_should_throw_exception()
     {
-        $roleName = RoleName::fromString('ROLE_A');
+        RoleName::fromString('ROLE_A');
     }
 }
