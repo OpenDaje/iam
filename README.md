@@ -1,3 +1,3 @@
-[![Build Status](https://travis-ci.com/OpenDaje/iam.svg?branch=master)](https://travis-ci.com/OpenDaje/iam)
+[![Build Status](https://travis-ci.com/OpenDaje/iam.svg?branch=master)](https://travis-ci.com/OpenDaje/iam) [![Maintainability](https://api.codeclimate.com/v1/badges/912ca0a9371fc59eac82/maintainability)](https://codeclimate.com/github/OpenDaje/iam/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/912ca0a9371fc59eac82/test_coverage)](https://codeclimate.com/github/OpenDaje/iam/test_coverage)
 
 # iam
