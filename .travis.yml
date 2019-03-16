@@ -1,3 +1,9 @@
+env:
+  global:
+    - CC_TEST_REPORTER_ID=3ecc8cde1f07ba7f6f0b70d8d5c52df8221d661b6c28190562fc26f177c1711b
+    - GIT_COMMITTED_AT=$(if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then git log -1 --pretty=format:%ct; else git log -1 --skip 1 --pretty=format:%ct; fi)
+
+
 language: php
 
 php:
@@ -6,17 +12,27 @@ php:
 cache:
   directories:
     - $HOME/.composer/cache
+
 before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+
   - composer install --optimize-autoloader --no-progress --ansi
 
 script: ./vendor/bin/phpunit
 
+#after_script:
+#  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
 
 jobs:
   include:
     - stage: test
       name: "phpunit"
-      script: ./vendor/bin/phpunit
+      script:
+        - ./vendor/bin/phpunit --coverage-clover clover.xml
+        - ./cc-test-reporter after-build --coverage-input-type clover --id $CC_TEST_REPORTER_ID --exit-code $TRAVIS_TEST_RESULT
+
 
     - stage: test
       name: "code style"
