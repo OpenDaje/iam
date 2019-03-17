@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace OpenDaje\IdentityAccess\Tests\Domain\Model\Access;
 
-
 use OpenDaje\IdentityAccess\Domain\Model\Access\GroupId;
 use PHPUnit\Framework\TestCase;
 
