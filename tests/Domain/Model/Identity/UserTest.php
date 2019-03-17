@@ -33,8 +33,8 @@ class UserTest extends TestCase
             EmailAddress::fromString('example@example.com'),
             'default-password',
             new Person(
-                                    $this->userId,
-                                    new FullName(
+                $this->userId,
+                new FullName(
                                         FirstName::fromString('carlo'),
                                         LastName::fromString('rossi')
                                     )
