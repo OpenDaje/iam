@@ -12,6 +12,13 @@ php:
 cache:
   directories:
     - $HOME/.composer/cache
+    - $HOME/.sonar/cache
+
+addons:
+  sonarcloud:
+    organization: "opendaje"
+    token:
+      secure:  "9d0e6f224d3c1e35bacfd39309568ebca7bc1cfa"
 
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
@@ -20,15 +27,14 @@ before_script:
 
   - composer install --optimize-autoloader --no-progress --ansi
 
-#script: ./vendor/bin/phpunit
-
 jobs:
   include:
     - stage: test
       name: "phpunit"
       script:
-        - ./vendor/bin/phpunit --coverage-clover clover.xml
+        - ./vendor/bin/phpunit --coverage-clover clover.xml --log-junit junit.xml
         - ./cc-test-reporter after-build --coverage-input-type clover --id $CC_TEST_REPORTER_ID --exit-code $TRAVIS_TEST_RESULT
+        - sonar-scanner
 
 
     - stage: test
@@ -38,6 +44,3 @@ jobs:
     - stage: test
       name: "code static analysis"
       script: ./vendor/bin/phpstan analyse --ansi
-cache:
-  directories:
-    - $HOME/.composer/cache
