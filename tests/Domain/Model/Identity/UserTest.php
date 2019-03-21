@@ -35,8 +35,8 @@ class UserTest extends TestCase
             new Person(
                 $this->userId,
                 new FullName(
-                                        FirstName::fromString('carlo'),
-                                        LastName::fromString('rossi')
+                    FirstName::fromString('carlo'),
+                    LastName::fromString('rossi')
                                     )
                                 )
         );
