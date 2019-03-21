@@ -17,7 +17,7 @@ class GroupNameTest extends TestCase
     private const COPY_OF_FIRST_GROUP_NAME    = 'CUSTOMERS';
 
     /** @test */
-    public function it_can_generate_GroupName_from_string()
+    public function it_can_generate_GroupName_from_string(): void
     {
         $groupName = GroupName::fromString(self::FIRST_GROUP_NAME);
 
@@ -28,7 +28,7 @@ class GroupNameTest extends TestCase
     }
 
     /** @test */
-    public function it_returns_a_new_value_object_if_modified()
+    public function it_returns_a_new_value_object_if_modified(): void
     {
         $groupName = GroupName::fromString(self::FIRST_GROUP_NAME);
 
@@ -39,7 +39,7 @@ class GroupNameTest extends TestCase
     }
 
     /** @test */
-    public function it_can_be_compared()
+    public function it_can_be_compared(): void
     {
         $first = GroupName::fromString(self::FIRST_GROUP_NAME);
         $second = GroupName::fromString(self::SECOND_GROUP_NAME);
@@ -54,7 +54,7 @@ class GroupNameTest extends TestCase
      * @test
      * @expectedException \InvalidArgumentException
      */
-    public function empty_group_name_should_throw_exception()
+    public function empty_group_name_should_throw_exception(): void
     {
         GroupName::fromString('');
     }
