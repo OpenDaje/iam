@@ -17,7 +17,7 @@ class RoleNameTest extends TestCase
     private const COPY_OF_FIRST_ROLE_NAME    = 'ROLE_USER';
 
     /** @test */
-    public function it_can_generate_RoleName_from_string()
+    public function it_can_generate_RoleName_from_string(): void
     {
         $roleName = RoleName::fromString(self::FIRST_ROLE_NAME);
 
@@ -28,7 +28,7 @@ class RoleNameTest extends TestCase
     }
 
     /** @test */
-    public function it_returns_a_new_value_object_if_modified()
+    public function it_returns_a_new_value_object_if_modified(): void
     {
         $roleName = RoleName::fromString(self::FIRST_ROLE_NAME);
 
@@ -39,7 +39,7 @@ class RoleNameTest extends TestCase
     }
 
     /** @test */
-    public function it_can_be_compared()
+    public function it_can_be_compared(): void
     {
         $first = RoleName::fromString(self::FIRST_ROLE_NAME);
         $second = RoleName::fromString(self::SECOND_ROLE_NAME);
@@ -54,7 +54,7 @@ class RoleNameTest extends TestCase
      * @test
      * @expectedException \InvalidArgumentException
      */
-    public function empty_role_name_should_throw_exception()
+    public function empty_role_name_should_throw_exception(): void
     {
         RoleName::fromString('');
     }
@@ -63,7 +63,7 @@ class RoleNameTest extends TestCase
      * @test
      * @expectedException \InvalidArgumentException
      */
-    public function short_role_name_should_throw_exception()
+    public function short_role_name_should_throw_exception(): void
     {
         RoleName::fromString('ROLE_A');
     }
