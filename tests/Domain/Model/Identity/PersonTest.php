@@ -21,7 +21,7 @@ class PersonTest extends TestCase
     private const FIXTURE_LASTNAME  = 'doe';
 
     /** @test */
-    public function it_can_create_Person()
+    public function it_can_create_Person(): void
     {
         $userId = UserId::fromString(self::USER_UUID);
         $fullName = new FullName(
@@ -37,7 +37,7 @@ class PersonTest extends TestCase
     }
 
     /** @test */
-    public function it_can_change_name()
+    public function it_can_change_name(): void
     {
         $userId = UserId::fromString(self::USER_UUID);
         $fullName = new FullName(
@@ -60,7 +60,7 @@ class PersonTest extends TestCase
     }
 
     /** @test */
-    public function it_can_change_userId()
+    public function it_can_change_userId(): void
     {
         $userId = UserId::fromString(self::USER_UUID);
         $otherUserId = UserId::fromString(
@@ -79,7 +79,7 @@ class PersonTest extends TestCase
     }
 
     /** @test */
-    public function it_can_compare_Person_by_identity()
+    public function it_can_compare_Person_by_identity(): void
     {
         $firstId = UserId::generate();
         $secondId = UserId::generate();
