@@ -26,15 +26,11 @@ class InMemoryUserRepository implements UserRepositoryInterface
 
     public function store(User $user): void
     {
-        // TODO: Implement store() method.
-        //$this->users->add($user);
         $this->users->set($user->userId()->toString(), $user);
     }
 
     public function ofId(UserId $userId): User
     {
-        // TODO: Implement ofId() method.
-
         return $this->users->get($userId->toString());
     }
 
