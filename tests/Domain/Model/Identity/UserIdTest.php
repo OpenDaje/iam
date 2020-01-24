@@ -17,7 +17,7 @@ class UserIdTest extends TestCase
     private const THIRD_UUID    = 'cc97e157-a0fa-478a-8ade-5692bbaa08e0';
 
     /** @test */
-    public function it_can_autogenerate_a_UserId()
+    public function it_can_autogenerate_a_UserId(): void
     {
         $userId = UserId::generate();
 
@@ -27,7 +27,7 @@ class UserIdTest extends TestCase
     }
 
     /** @test */
-    public function it_can_generate_a_UserId_from_string()
+    public function it_can_generate_a_UserId_from_string(): void
     {
         $contestId = UserId::fromString(self::FIRST_UUID);
 
@@ -40,7 +40,7 @@ class UserIdTest extends TestCase
      * @test
      * @depends  it_can_autogenerate_a_UserId
      */
-    public function it_can_be_compared()
+    public function it_can_be_compared(): void
     {
         $first = UserId::fromString(self::FIRST_UUID);
         $second = UserId::fromString(self::SECOND_UUID);

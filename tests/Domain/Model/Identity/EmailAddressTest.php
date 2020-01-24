@@ -17,7 +17,7 @@ class EmailAddressTest extends TestCase
     private const THIRD_EMAIL   = 'third@example.com';
 
     /** @test */
-    public function it_can_create_EmailAddress_from_string()
+    public function it_can_create_EmailAddress_from_string(): void
     {
         $email = EmailAddress::fromString(self::FIRST_EMAIL);
 
@@ -29,7 +29,7 @@ class EmailAddressTest extends TestCase
     }
 
     /** @test */
-    public function it_can_return_new_VO_when_modify_email()
+    public function it_can_return_new_VO_when_modify_email(): void
     {
         $email = EmailAddress::fromString(self::FIRST_EMAIL);
 
@@ -42,7 +42,7 @@ class EmailAddressTest extends TestCase
      * @test
      * @depends  it_can_create_EmailAddress_from_string
      */
-    public function it_can_be_compared()
+    public function it_can_be_compared(): void
     {
         $first = EmailAddress::fromString(self::FIRST_EMAIL);
         $second = EmailAddress::fromString(self::SECOND_EMAIL);
@@ -57,14 +57,14 @@ class EmailAddressTest extends TestCase
      * @test
      * @dataProvider sanitizedEmails
      */
-    public function it_should_sanitize_email($email, $expectedEmail)
+    public function it_should_sanitize_email($email, $expectedEmail): void
     {
         $email = EmailAddress::fromString($email);
 
         $this->assertEquals($expectedEmail, $email->toString());
     }
 
-    public function sanitizedEmails()
+    public function sanitizedEmails(): iterable
     {
         yield 'Clean email' => ['user@example.com', 'user@example.com'];
         yield 'Uppercase char' => ['USER@EXAMPLE.COM', 'user@example.com'];
@@ -77,7 +77,7 @@ class EmailAddressTest extends TestCase
      * @test
      * @expectedException \InvalidArgumentException
      */
-    public function empty_email_should_throw_exception()
+    public function empty_email_should_throw_exception(): void
     {
         EmailAddress::fromString('');
     }

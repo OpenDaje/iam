@@ -17,7 +17,7 @@ class LastNameTest extends TestCase
     private const COPY_OF_FIRST_LAST_NAME   = 'obama';
 
     /** @test */
-    public function it_can_generate_a_LastName_from_string()
+    public function it_can_generate_a_LastName_from_string(): void
     {
         $lastName = LastName::fromString(self::FIRST_LAST_NAME);
 
@@ -28,7 +28,7 @@ class LastNameTest extends TestCase
     }
 
     /** @test */
-    public function it_returns_a_new_value_object_if_modified()
+    public function it_returns_a_new_value_object_if_modified(): void
     {
         $lastName = LastName::fromString(self::FIRST_LAST_NAME);
 
@@ -39,7 +39,7 @@ class LastNameTest extends TestCase
     }
 
     /** @test */
-    public function it_can_be_compared()
+    public function it_can_be_compared(): void
     {
         $first = LastName::fromString(self::FIRST_LAST_NAME);
         $second = LastName::fromString(self::SECOND_LAST_NAME);
@@ -54,7 +54,7 @@ class LastNameTest extends TestCase
      * @test
      * @expectedException \InvalidArgumentException
      */
-    public function empty_lastName_should_throw_exception()
+    public function empty_lastName_should_throw_exception(): void
     {
         LastName::fromString('');
     }

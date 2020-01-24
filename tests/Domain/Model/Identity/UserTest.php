@@ -35,15 +35,15 @@ class UserTest extends TestCase
             new Person(
                 $this->userId,
                 new FullName(
-                                        FirstName::fromString('carlo'),
-                                        LastName::fromString('rossi')
+                    FirstName::fromString('carlo'),
+                    LastName::fromString('rossi')
                                     )
                                 )
         );
     }
 
     /** @test */
-    public function it_can_create_a_User()
+    public function it_can_create_a_User(): void
     {
         $userId = UserId::fromString(self::FIRST_UUID);
         $email = EmailAddress::fromString('example@example.com');
@@ -64,7 +64,7 @@ class UserTest extends TestCase
     }
 
     /** @test */
-    public function it_can_change_password()
+    public function it_can_change_password(): void
     {
         $newPassword = 'new-password';
 
@@ -75,7 +75,7 @@ class UserTest extends TestCase
 
 
     /** @test */
-    public function it_can_change_personal_name()
+    public function it_can_change_personal_name(): void
     {
         $name = new FullName(
             FirstName::fromString('new firstName'),
