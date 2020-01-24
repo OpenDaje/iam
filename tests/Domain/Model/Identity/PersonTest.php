@@ -27,7 +27,7 @@ class PersonTest extends TestCase
         $fullName = new FullName(
             FirstName::fromString(self::FIXTURE_NAME),
             LastName::fromString(self::FIXTURE_LASTNAME)
-                    );
+        );
 
         $SUT = new Person($userId, $fullName);
 
@@ -48,8 +48,6 @@ class PersonTest extends TestCase
         $newFirstName = FirstName::fromString('new');
         $newLastName = LastName::fromString('new');
         $newFullName = new FullName($newFirstName, $newLastName);
-
-
 
         $SUT = new Person($userId, $fullName);
         $SUT = $SUT->changeName($newFullName);

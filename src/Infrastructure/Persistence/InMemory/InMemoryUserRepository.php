@@ -23,7 +23,6 @@ class InMemoryUserRepository implements UserRepositoryInterface
         $this->users = new arrayCollection();
     }
 
-
     public function store(User $user): void
     {
         $this->users->set($user->userId()->toString(), $user);

@@ -82,7 +82,6 @@ class FullNameTest extends TestCase
             LastName::fromString(self::COPY_OF_FIRST_LAST_NAME)
         );
 
-
         self::assertFalse($first->equals($second));
         self::assertTrue($first->equals($copyOfFirst));
         self::assertFalse($second->equals($copyOfFirst));
