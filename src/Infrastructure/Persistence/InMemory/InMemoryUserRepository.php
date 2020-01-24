@@ -33,7 +33,7 @@ class InMemoryUserRepository implements UserRepositoryInterface
         return $this->users->get($userId->toString());
     }
 
-    private function containsKey($key): bool
+    private function containsKey(string $key): bool
     {
         return $this->users->containsKey($key);
     }
