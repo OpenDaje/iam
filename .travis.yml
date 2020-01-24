@@ -44,3 +44,7 @@ jobs:
     - stage: test
       name: "code static analysis"
       script: ./vendor/bin/phpstan analyse --ansi
+
+    - stage: test
+      name: "php psalm static analysis"
+      script: ./vendor/bin/psalm --show-info=true
