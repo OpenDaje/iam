@@ -17,8 +17,8 @@ cache:
 addons:
   sonarcloud:
     organization: "opendaje"
-    token:
-      secure:  "9d0e6f224d3c1e35bacfd39309568ebca7bc1cfa"
+    token: $SECRET_SONAR_TOKEN
+      #secure:  "9d0e6f224d3c1e35bacfd39309568ebca7bc1cfa"
 
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
