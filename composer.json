@@ -1,6 +1,8 @@
 {
     "name": "opendaje/identity-access",
+    "description": "Identity Access library",
     "type": "project",
+    "license": "GPL-3.0-or-later",
     "authors": [
         {
             "name": "Zerai Teclai",
