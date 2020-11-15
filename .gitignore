@@ -5,6 +5,7 @@ Makefile
 behat.yml
 /features/
 
+.actrc
 .php_cs.cache
 /vendor/
 /var/
