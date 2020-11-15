@@ -22,7 +22,7 @@ class FullNameTest extends TestCase
     private const COPY_OF_FIRST_LAST_NAME   = 'obama';
 
     /** @test */
-    public function it_can_create_a_FullName()
+    public function it_can_create_a_FullName(): void
     {
         $firstName = FirstName::fromString(self::FIRST_FIRST_NAME);
         $lastName = LastName::fromString(self::FIRST_LAST_NAME);
@@ -35,7 +35,7 @@ class FullNameTest extends TestCase
     }
 
     /** @test */
-    public function it_returns_a_new_value_object_when_first_name_is_modified()
+    public function it_returns_a_new_value_object_when_first_name_is_modified(): void
     {
         $firstName = FirstName::fromString(self::FIRST_FIRST_NAME);
         $lastName = LastName::fromString(self::FIRST_LAST_NAME);
@@ -50,7 +50,7 @@ class FullNameTest extends TestCase
     }
 
     /** @test */
-    public function it_returns_a_new_value_object_when_last_name_is_modified()
+    public function it_returns_a_new_value_object_when_last_name_is_modified(): void
     {
         $firstName = FirstName::fromString(self::FIRST_FIRST_NAME);
         $lastName = LastName::fromString(self::FIRST_LAST_NAME);
@@ -65,7 +65,7 @@ class FullNameTest extends TestCase
     }
 
     /** @test */
-    public function it_can_be_compared()
+    public function it_can_be_compared(): void
     {
         $first = new FullName(
             FirstName::fromString(self::FIRST_FIRST_NAME),
@@ -81,8 +81,6 @@ class FullNameTest extends TestCase
             FirstName::fromString(self::COPY_OF_FIRST_NAME),
             LastName::fromString(self::COPY_OF_FIRST_LAST_NAME)
         );
-
-
 
         self::assertFalse($first->equals($second));
         self::assertTrue($first->equals($copyOfFirst));

@@ -8,6 +8,7 @@ final class Role
 {
     private $roleId;
     private $name;
+    /** @var null|string */
     private $description;
 
     public function __construct(RoleId $roleId, RoleName $name)
@@ -26,7 +27,7 @@ final class Role
         return $this->name;
     }
 
-    public function description(): string
+    public function description(): ?string
     {
         return $this->description;
     }
@@ -41,7 +42,7 @@ final class Role
         $this->description = $description;
     }
 
-    public function sameIdentityAs($other): bool
+    public function sameIdentityAs(self $other): bool
     {
         return get_class($this) === get_class($other) && $this->roleId->equals($other->roleId);
     }

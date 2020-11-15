@@ -19,7 +19,6 @@ class UserTest extends TestCase
     private const SECOND_UUID   = 'dc97e157-a0fa-478a-8ade-5692bbaa08e0'; // EQUAL TO THE FIRST
     private const THIRD_UUID    = 'cc97e157-a0fa-478a-8ade-5692bbaa08e0';
 
-
     private $userId;
     private $defaulUser;
 
@@ -33,17 +32,17 @@ class UserTest extends TestCase
             EmailAddress::fromString('example@example.com'),
             'default-password',
             new Person(
-                                    $this->userId,
-                                    new FullName(
-                                        FirstName::fromString('carlo'),
-                                        LastName::fromString('rossi')
-                                    )
-                                )
+                $this->userId,
+                new FullName(
+                    FirstName::fromString('carlo'),
+                    LastName::fromString('rossi')
+                )
+            )
         );
     }
 
     /** @test */
-    public function it_can_create_a_User()
+    public function it_can_create_a_User(): void
     {
         $userId = UserId::fromString(self::FIRST_UUID);
         $email = EmailAddress::fromString('example@example.com');
@@ -64,7 +63,7 @@ class UserTest extends TestCase
     }
 
     /** @test */
-    public function it_can_change_password()
+    public function it_can_change_password(): void
     {
         $newPassword = 'new-password';
 
@@ -73,9 +72,8 @@ class UserTest extends TestCase
         self::assertEquals($newPassword, $this->defaulUser->password());
     }
 
-
     /** @test */
-    public function it_can_change_personal_name()
+    public function it_can_change_personal_name(): void
     {
         $name = new FullName(
             FirstName::fromString('new firstName'),

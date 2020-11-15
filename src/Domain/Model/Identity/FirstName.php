@@ -6,6 +6,7 @@ namespace OpenDaje\IdentityAccess\Domain\Model\Identity;
 
 final class FirstName
 {
+    /** @var string  */
     private $firstName;
 
     public function __construct(string $firstName)

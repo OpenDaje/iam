@@ -1,7 +1,6 @@
 .idea/
 /extra/
 /lib/fpp/*
-Makefile
 behat.yml
 /features/
 

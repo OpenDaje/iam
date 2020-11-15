@@ -6,6 +6,7 @@ namespace OpenDaje\IdentityAccess\Domain\Model\Identity;
 
 final class EmailAddress
 {
+    /** @var string  */
     private $email;
 
     public function __construct(string $email)
@@ -48,8 +49,6 @@ final class EmailAddress
 
     private function sanitize(string $email): string
     {
-        $email = strtolower(trim($email));
-
-        return $email;
+        return strtolower(trim($email));
     }
 }

@@ -1,6 +1,8 @@
 {
     "name": "opendaje/identity-access",
+    "description": "Identity Access library",
     "type": "project",
+    "license": "GPL-3.0-or-later",
     "authors": [
         {
             "name": "Zerai Teclai",
@@ -10,15 +12,17 @@
     "minimum-stability": "stable",
     "require": {
         "php": "^7.2",
-        "ramsey/uuid": "^3.8",
-        "psr/log": "^1.1"
+        "doctrine/collections": "^1.5",
+        "psr/log": "^1.1",
+        "ramsey/uuid": "^3.8"
     },
     "require-dev": {
         "behat/behat": "^3.5",
         "friendsofphp/php-cs-fixer": "^2.14",
         "phpstan/phpstan": "^0.11.2",
         "phpunit/phpunit": "^7",
-        "prolic/fpp": "dev-master"
+        "prolic/fpp": "dev-master",
+        "vimeo/psalm": "^3.8"
     },
     "config": {
         "preferred-install": {
