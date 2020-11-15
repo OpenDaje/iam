@@ -19,7 +19,7 @@
     "require-dev": {
         "behat/behat": "^3.5",
         "friendsofphp/php-cs-fixer": "^2.14",
-        "phpstan/phpstan": "^0.11.2",
+        "phpstan/phpstan": "^0.12",
         "phpunit/phpunit": "^7",
         "prolic/fpp": "dev-master",
         "vimeo/psalm": "^3.8"
