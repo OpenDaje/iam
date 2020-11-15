@@ -1,0 +1,157 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Property OpenDaje\\\\IdentityAccess\\\\Domain\\\\Model\\\\Access\\\\GroupId\\:\\:\\$uuid has no typehint specified\\.$#"
+			count: 1
+			path: src/Domain/Model/Access/GroupId.php
+
+		-
+			message: "#^Property OpenDaje\\\\IdentityAccess\\\\Domain\\\\Model\\\\Access\\\\Role\\:\\:\\$roleId has no typehint specified\\.$#"
+			count: 1
+			path: src/Domain/Model/Access/Role.php
+
+		-
+			message: "#^Property OpenDaje\\\\IdentityAccess\\\\Domain\\\\Model\\\\Access\\\\Role\\:\\:\\$name has no typehint specified\\.$#"
+			count: 1
+			path: src/Domain/Model/Access/Role.php
+
+		-
+			message: "#^Property OpenDaje\\\\IdentityAccess\\\\Domain\\\\Model\\\\Access\\\\RoleId\\:\\:\\$uuid has no typehint specified\\.$#"
+			count: 1
+			path: src/Domain/Model/Access/RoleId.php
+
+		-
+			message: "#^Property OpenDaje\\\\IdentityAccess\\\\Domain\\\\Model\\\\Identity\\\\FullName\\:\\:\\$firstName has no typehint specified\\.$#"
+			count: 1
+			path: src/Domain/Model/Identity/FullName.php
+
+		-
+			message: "#^Property OpenDaje\\\\IdentityAccess\\\\Domain\\\\Model\\\\Identity\\\\FullName\\:\\:\\$lastName has no typehint specified\\.$#"
+			count: 1
+			path: src/Domain/Model/Identity/FullName.php
+
+		-
+			message: "#^Property OpenDaje\\\\IdentityAccess\\\\Domain\\\\Model\\\\Identity\\\\Person\\:\\:\\$userId has no typehint specified\\.$#"
+			count: 1
+			path: src/Domain/Model/Identity/Person.php
+
+		-
+			message: "#^Property OpenDaje\\\\IdentityAccess\\\\Domain\\\\Model\\\\Identity\\\\Person\\:\\:\\$name has no typehint specified\\.$#"
+			count: 1
+			path: src/Domain/Model/Identity/Person.php
+
+		-
+			message: "#^Property OpenDaje\\\\IdentityAccess\\\\Domain\\\\Model\\\\Identity\\\\User\\:\\:\\$userId has no typehint specified\\.$#"
+			count: 1
+			path: src/Domain/Model/Identity/User.php
+
+		-
+			message: "#^Property OpenDaje\\\\IdentityAccess\\\\Domain\\\\Model\\\\Identity\\\\User\\:\\:\\$email has no typehint specified\\.$#"
+			count: 1
+			path: src/Domain/Model/Identity/User.php
+
+		-
+			message: "#^Property OpenDaje\\\\IdentityAccess\\\\Domain\\\\Model\\\\Identity\\\\User\\:\\:\\$password has no typehint specified\\.$#"
+			count: 1
+			path: src/Domain/Model/Identity/User.php
+
+		-
+			message: "#^Property OpenDaje\\\\IdentityAccess\\\\Domain\\\\Model\\\\Identity\\\\User\\:\\:\\$person has no typehint specified\\.$#"
+			count: 1
+			path: src/Domain/Model/Identity/User.php
+
+		-
+			message: "#^Property OpenDaje\\\\IdentityAccess\\\\Domain\\\\Model\\\\Identity\\\\UserId\\:\\:\\$uuid has no typehint specified\\.$#"
+			count: 1
+			path: src/Domain/Model/Identity/UserId.php
+
+		-
+			message: "#^Property OpenDaje\\\\IdentityAccess\\\\Infrastructure\\\\Persistence\\\\InMemory\\\\InMemoryUserRepository\\:\\:\\$users with generic interface Doctrine\\\\Common\\\\Collections\\\\Collection does not specify its types\\: TKey, T$#"
+			count: 1
+			path: src/Infrastructure/Persistence/InMemory/InMemoryUserRepository.php
+
+		-
+			message: "#^Method OpenDaje\\\\IdentityAccess\\\\Tests\\\\Domain\\\\Model\\\\Access\\\\GroupNameTest\\:\\:short_group_name_should_throw_exception\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: tests/Domain/Model/Access/GroupNameTest.php
+
+		-
+			message: "#^Property OpenDaje\\\\IdentityAccess\\\\Tests\\\\Domain\\\\Model\\\\Access\\\\RoleTest\\:\\:\\$role has no typehint specified\\.$#"
+			count: 1
+			path: tests/Domain/Model/Access/RoleTest.php
+
+		-
+			message: "#^Method OpenDaje\\\\IdentityAccess\\\\Tests\\\\Domain\\\\Model\\\\Access\\\\RoleTest\\:\\:setUp\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: tests/Domain/Model/Access/RoleTest.php
+
+		-
+			message: "#^Method OpenDaje\\\\IdentityAccess\\\\Tests\\\\Domain\\\\Model\\\\Access\\\\RoleTest\\:\\:it_can_create_a_Role\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: tests/Domain/Model/Access/RoleTest.php
+
+		-
+			message: "#^Method OpenDaje\\\\IdentityAccess\\\\Tests\\\\Domain\\\\Model\\\\Access\\\\RoleTest\\:\\:it_can_change_name\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: tests/Domain/Model/Access/RoleTest.php
+
+		-
+			message: "#^Method OpenDaje\\\\IdentityAccess\\\\Tests\\\\Domain\\\\Model\\\\Access\\\\RoleTest\\:\\:it_can_change_description\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: tests/Domain/Model/Access/RoleTest.php
+
+		-
+			message: "#^Method OpenDaje\\\\IdentityAccess\\\\Tests\\\\Domain\\\\Model\\\\Access\\\\RoleTest\\:\\:it_can_be_compared\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: tests/Domain/Model/Access/RoleTest.php
+
+		-
+			message: "#^Method OpenDaje\\\\IdentityAccess\\\\Tests\\\\Domain\\\\Model\\\\Identity\\\\EmailAddressTest\\:\\:it_should_sanitize_email\\(\\) has parameter \\$email with no typehint specified\\.$#"
+			count: 1
+			path: tests/Domain/Model/Identity/EmailAddressTest.php
+
+		-
+			message: "#^Method OpenDaje\\\\IdentityAccess\\\\Tests\\\\Domain\\\\Model\\\\Identity\\\\EmailAddressTest\\:\\:it_should_sanitize_email\\(\\) has parameter \\$expectedEmail with no typehint specified\\.$#"
+			count: 1
+			path: tests/Domain/Model/Identity/EmailAddressTest.php
+
+		-
+			message: "#^Method OpenDaje\\\\IdentityAccess\\\\Tests\\\\Domain\\\\Model\\\\Identity\\\\EmailAddressTest\\:\\:sanitizedEmails\\(\\) return type has no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: tests/Domain/Model/Identity/EmailAddressTest.php
+
+		-
+			message: "#^Property OpenDaje\\\\IdentityAccess\\\\Tests\\\\Domain\\\\Model\\\\Identity\\\\UserTest\\:\\:\\$userId has no typehint specified\\.$#"
+			count: 1
+			path: tests/Domain/Model/Identity/UserTest.php
+
+		-
+			message: "#^Property OpenDaje\\\\IdentityAccess\\\\Tests\\\\Domain\\\\Model\\\\Identity\\\\UserTest\\:\\:\\$defaulUser has no typehint specified\\.$#"
+			count: 1
+			path: tests/Domain/Model/Identity/UserTest.php
+
+		-
+			message: "#^Method OpenDaje\\\\IdentityAccess\\\\Tests\\\\Domain\\\\Model\\\\Identity\\\\UserTest\\:\\:setUp\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: tests/Domain/Model/Identity/UserTest.php
+
+		-
+			message: "#^Method OpenDaje\\\\IdentityAccess\\\\Tests\\\\Domain\\\\Model\\\\Identity\\\\UserTest\\:\\:tearDown\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: tests/Domain/Model/Identity/UserTest.php
+
+		-
+			message: "#^Property OpenDaje\\\\IdentityAccess\\\\Tests\\\\Infrastructure\\\\Persistance\\\\InMemory\\\\InMemoryUserRepositoryTest\\:\\:\\$repository has no typehint specified\\.$#"
+			count: 1
+			path: tests/Infrastructure/Persistance/InMemory/InMemoryUserRepositoryTest.php
+
+		-
+			message: "#^Method OpenDaje\\\\IdentityAccess\\\\Tests\\\\Infrastructure\\\\Persistance\\\\InMemory\\\\InMemoryUserRepositoryTest\\:\\:setUp\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: tests/Infrastructure/Persistance/InMemory/InMemoryUserRepositoryTest.php
+
+		-
+			message: "#^Method OpenDaje\\\\IdentityAccess\\\\Tests\\\\Infrastructure\\\\Persistance\\\\InMemory\\\\InMemoryUserRepositoryTest\\:\\:tearDown\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: tests/Infrastructure/Persistance/InMemory/InMemoryUserRepositoryTest.php
+
