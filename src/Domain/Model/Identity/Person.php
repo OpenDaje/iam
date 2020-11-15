@@ -35,8 +35,8 @@ final class Person
         return new self($this->userId, $name);
     }
 
-    public function sameIdentityAs($other): bool
+    public function sameIdentityAs(self $other): bool
     {
-        return get_class($this) === get_class($other) && $this->userId->equals($other->userId);
+        return $this->userId->equals($other->userId);
     }
 }

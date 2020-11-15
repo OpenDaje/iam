@@ -72,7 +72,6 @@ class EmailAddressTest extends TestCase
         yield 'Both space & uppercase' => ['    UsER@EXamPLE.coM  ', 'user@example.com'];
     }
 
-
     /**
      * @test
      * @expectedException \InvalidArgumentException

@@ -24,7 +24,7 @@ class User
         $this->person = $this->person()->changeName($aPersonalName);
     }
 
-    public function changePassword($password): void
+    public function changePassword(string $password): void
     {
         $this->password = $password;
     }

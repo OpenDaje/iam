@@ -17,8 +17,7 @@ cache:
 addons:
   sonarcloud:
     organization: "opendaje"
-    token:
-      secure:  "9d0e6f224d3c1e35bacfd39309568ebca7bc1cfa"
+    token: $SECRET_SONAR_TOKEN
 
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
@@ -32,9 +31,12 @@ jobs:
     - stage: test
       name: "phpunit"
       script:
-        - ./vendor/bin/phpunit --coverage-clover clover.xml --log-junit junit.xml
-        - ./cc-test-reporter after-build --coverage-input-type clover --id $CC_TEST_REPORTER_ID --exit-code $TRAVIS_TEST_RESULT
-        - sonar-scanner
+        - ./vendor/bin/phpunit --coverage-clover=report-coverage.clover --log-junit=report-test.xml
+      # run Sonar scanner and pipe the coverage data to Code Climate
+      after_script:
+        - if [[ "$TRAVIS_TEST_RESULT" == 0 ]]; then sonar-scanner; fi
+        - ./cc-test-reporter format-coverage -t clover -o coverage/codeclimate.json report-coverage.clover # Format backend coverage
+        - if [[ "$TRAVIS_TEST_RESULT" == 0 ]]; then ./cc-test-reporter upload-coverage; fi  # Upload coverage/codeclimate.json
 
 
     - stage: test
@@ -42,5 +44,9 @@ jobs:
       script: ./vendor/bin/php-cs-fixer fix src/ --dry-run --ansi
 
     - stage: test
-      name: "code static analysis"
+      name: "static analysis - (phpstan)"
       script: ./vendor/bin/phpstan analyse --ansi
+
+    - stage: test
+      name: "static analysis - (psalm)"
+      script: ./vendor/bin/psalm --show-info=true

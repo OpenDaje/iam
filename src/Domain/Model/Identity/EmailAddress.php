@@ -6,6 +6,7 @@ namespace OpenDaje\IdentityAccess\Domain\Model\Identity;
 
 final class EmailAddress
 {
+    /** @var string  */
     private $email;
 
     public function __construct(string $email)

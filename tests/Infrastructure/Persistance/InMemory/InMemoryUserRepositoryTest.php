@@ -52,12 +52,9 @@ class InMemoryUserRepositoryTest extends TestCase
     {
         $user = $this->defaultUser();
 
-
         $this->repository->store($user);
 
         self::assertInstanceOf(User::class, $this->repository->ofId($user->userId()));
-
-        //self::assertTrue($this->repository->containsKey($user->userId()->toString()));
     }
 
     /** @test */
@@ -73,8 +70,6 @@ class InMemoryUserRepositoryTest extends TestCase
         //TODO: add method sameIdentity in User
         //self::assertTrue($result->sameIdentiy($user));
     }
-
-
 
     protected function tearDown()/* The :void return type declaration that should be here would cause a BC issue */
     {
