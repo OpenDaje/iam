@@ -8,7 +8,7 @@ includes:
     #- vendor/phpstan/phpstan-strict-rules/rules.neon
 
 parameters:
-    level: 7
+    level: 3
     paths:
         - src
         - tests
@@ -17,6 +17,6 @@ parameters:
     ignoreErrors:
 
 
-    excludes_analyse:
+    excludePaths:
         - '*/vendor/*'
         - '*/Spec/*'
