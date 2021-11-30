@@ -1,7 +1,7 @@
 {
     "name": "opendaje/identity-access",
+    "type": "library",
     "description": "Identity Access library",
-    "type": "project",
     "license": "GPL-3.0-or-later",
     "authors": [
         {
@@ -9,7 +9,6 @@
             "email": "teclaizerai@google.com"
         }
     ],
-    "minimum-stability": "stable",
     "require": {
         "php": ">=7.2",
         "doctrine/collections": "^1.5",
@@ -38,5 +37,6 @@
         "psr-4": {
             "OpenDaje\\IdentityAccess\\Tests\\": "tests"
         }
-    }
+    },
+    "minimum-stability": "stable"
 }
