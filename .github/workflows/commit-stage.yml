@@ -83,6 +83,22 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+
+      - name: Setup php extension cache environment
+        id: cache-php-extensions
+        uses: shivammathur/cache-extensions@v1
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: ${{ env.PHP_EXTENSIONS }}
+          key: ${{ env.PHP_EXTENSIONS_CACHE_KEY }}
+
+      - name: Cache PHP extensions
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.cache-php-extensions.outputs.dir }}
+          key: ${{ steps.cache-php-extensions.outputs.key }}
+          restore-keys: ${{ steps.cache-php-extensions.outputs.key }}
+
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
@@ -91,17 +107,34 @@ jobs:
           extensions: intl, bcmath, curl, openssl, mbstring
           coverage: none
           ini-values: memory_limit=-1
-      - name: Cache PHPStan results
-        uses: actions/cache@v2
+
+      - name: Get Composer Cache Directory
+        id: composer-cache
+        run: echo "::set-output name=dir::$(composer config cache-files-dir)"
+
+      - name: Cache dependencies
+        uses: actions/cache@v2.1.7
         with:
-          path: /tmp/phpstan
-          key: phpstan-php${{ matrix.php }}-${{ github.sha }}
-          restore-keys: |
-            phpstan-php${{ matrix.php }}-
-            phpstan-
-        continue-on-error: true
-      - name: Update project dependencies
-        run: composer update --no-interaction --no-progress --ansi
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-${{ matrix.php }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: ${{ runner.os }}-${{ matrix.php }}-composer-
+
+      - name: Install Composer dependencies
+        run: composer install --prefer-dist --no-progress --no-scripts --ansi
+
+#      - name: Cache PHPStan results
+#        uses: actions/cache@v2
+#        with:
+#          path: /tmp/phpstan
+#          key: phpstan-php${{ matrix.php }}-${{ github.sha }}
+#          restore-keys: |
+#            phpstan-php${{ matrix.php }}-
+#            phpstan-
+#        continue-on-error: true
+
+#      - name: Update project dependencies
+#        run: composer install --no-interaction --no-progress --ansi
+
       - name: Run PHPStan analysis
         run: |
           mv phpstan.neon.dist phpstan.neon
