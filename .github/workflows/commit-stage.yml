@@ -103,10 +103,9 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
-          tools: composer, phpstan
-          extensions: intl, bcmath, curl, openssl, mbstring
-          coverage: none
+          extensions: ${{ env.PHP_EXTENSIONS }}
           ini-values: memory_limit=-1
+          coverage: none
 
       - name: Get Composer Cache Directory
         id: composer-cache
@@ -138,4 +137,4 @@ jobs:
       - name: Run PHPStan analysis
         run: |
           mv phpstan.neon.dist phpstan.neon
-          phpstan analyse --no-interaction --no-progress --no-interaction --ansi
+          ./vendor/bin/phpstan analyse --no-interaction --no-progress --no-interaction --ansi

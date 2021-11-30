@@ -8,7 +8,7 @@ includes:
     #- vendor/phpstan/phpstan-strict-rules/rules.neon
 
 parameters:
-    level: 3
+    level: 0
     paths:
         - src
         - tests
