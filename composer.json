@@ -6,12 +6,12 @@
     "authors": [
         {
             "name": "Zerai Teclai",
-            "email": "teclaizerai.com@googlemail.com"
+            "email": "teclaizerai@google.com"
         }
     ],
     "minimum-stability": "stable",
     "require": {
-        "php": "^7.2",
+        "php": ">=7.2",
         "doctrine/collections": "^1.5",
         "psr/log": "^1.1",
         "ramsey/uuid": "^3.8"
@@ -21,7 +21,6 @@
         "friendsofphp/php-cs-fixer": "^2.14",
         "phpstan/phpstan": "^0.12",
         "phpunit/phpunit": "^7",
-        "prolic/fpp": "dev-master",
         "vimeo/psalm": "^3.8"
     },
     "config": {
