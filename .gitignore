@@ -7,4 +7,5 @@ behat.yml
 .actrc
 .php_cs.cache
 /vendor/
+/tools/**/vendor
 /var/
