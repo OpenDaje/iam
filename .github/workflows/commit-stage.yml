@@ -124,6 +124,16 @@ jobs:
           composer install --prefer-dist --no-progress --no-scripts --ansi
           composer bin ecs install
 
+      - name: Cache ECS results
+        uses: actions/cache@v2
+        with:
+          path: /tmp/ecs
+          key: ecs-php${{ matrix.php }}-${{ github.sha }}
+          restore-keys: |
+            phpstan-php${{ matrix.php }}-
+            ecs-
+        continue-on-error: true
+
       - name: Run ecs
         run: ./vendor/bin/ecs check
 
@@ -191,13 +201,13 @@ jobs:
 #            phpstan-
 #        continue-on-error: true
 
-#      - name: Update project dependencies
-#        run: composer install --no-interaction --no-progress --ansi
-
       - name: Run PHPStan analysis
         run: |
           mv phpstan.neon.dist phpstan.neon
           ./vendor/bin/phpstan analyse --no-interaction --no-progress --no-interaction --ansi
+
+
+
 
   phpunit:
     name: PHPUnit
