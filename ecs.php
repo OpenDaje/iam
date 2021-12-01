@@ -47,5 +47,5 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->import(SetList::ARRAY);
     $containerConfigurator->import(SetList::SPACES);
     $containerConfigurator->import(SetList::DOCBLOCK);
-    // $containerConfigurator->import(SetList::PSR_12);
+    $containerConfigurator->import(SetList::PSR_12);
 };
