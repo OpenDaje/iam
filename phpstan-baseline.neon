@@ -66,11 +66,6 @@ parameters:
 			path: src/Domain/Model/Identity/UserId.php
 
 		-
-			message: "#^Method OpenDaje\\\\IdentityAccess\\\\Infrastructure\\\\Persistence\\\\InMemory\\\\InMemoryUserRepository\\:\\:containsKey\\(\\) is unused\\.$#"
-			count: 1
-			path: src/Infrastructure/Persistence/InMemory/InMemoryUserRepository.php
-
-		-
 			message: "#^Property OpenDaje\\\\IdentityAccess\\\\Infrastructure\\\\Persistence\\\\InMemory\\\\InMemoryUserRepository\\:\\:\\$users with generic interface Doctrine\\\\Common\\\\Collections\\\\Collection does not specify its types\\: TKey, T$#"
 			count: 1
 			path: src/Infrastructure/Persistence/InMemory/InMemoryUserRepository.php
