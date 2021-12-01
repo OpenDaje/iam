@@ -16,6 +16,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $parameters->set(Option::SKIP, [
         __DIR__ . '/var',
     ]);
+    $parameters->set(Option::CACHE_DIRECTORY, __DIR__ . '/var/ecs/.ecs_cache');
 
     $services = $containerConfigurator->services();
     $services->set(ArraySyntaxFixer::class)
