@@ -18,7 +18,9 @@ class RoleNameTest extends TestCase
 
     private const COPY_OF_FIRST_ROLE_NAME = 'ROLE_USER';
 
-    /** @test */
+    /**
+     * @test
+     */
     public function it_can_generate_RoleName_from_string(): void
     {
         $roleName = RoleName::fromString(self::FIRST_ROLE_NAME);
@@ -29,7 +31,9 @@ class RoleNameTest extends TestCase
         self::assertEquals(self::FIRST_ROLE_NAME, $roleName->__toString());
     }
 
-    /** @test */
+    /**
+     * @test
+     */
     public function it_returns_a_new_value_object_if_modified(): void
     {
         $roleName = RoleName::fromString(self::FIRST_ROLE_NAME);
@@ -40,7 +44,9 @@ class RoleNameTest extends TestCase
         self::assertEquals(self::SECOND_ROLE_NAME, $roleName->roleName());
     }
 
-    /** @test */
+    /**
+     * @test
+     */
     public function it_can_be_compared(): void
     {
         $first = RoleName::fromString(self::FIRST_ROLE_NAME);

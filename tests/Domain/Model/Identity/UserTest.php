@@ -38,7 +38,9 @@ class UserTest extends TestCase
         );
     }
 
-    /** @test */
+    /**
+     * @test
+     */
     public function it_can_create_a_User(): void
     {
         $userId = UserId::fromString(self::FIRST_UUID);
@@ -59,7 +61,9 @@ class UserTest extends TestCase
         self::assertEquals($person, $user->person());
     }
 
-    /** @test */
+    /**
+     * @test
+     */
     public function it_can_change_password(): void
     {
         $newPassword = 'new-password';
@@ -69,7 +73,9 @@ class UserTest extends TestCase
         self::assertEquals($newPassword, $this->defaulUser->password());
     }
 
-    /** @test */
+    /**
+     * @test
+     */
     public function it_can_change_personal_name(): void
     {
         $name = new FullName(

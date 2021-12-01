@@ -18,7 +18,9 @@ class GroupNameTest extends TestCase
 
     private const COPY_OF_FIRST_GROUP_NAME = 'CUSTOMERS';
 
-    /** @test */
+    /**
+     * @test
+     */
     public function it_can_generate_GroupName_from_string(): void
     {
         $groupName = GroupName::fromString(self::FIRST_GROUP_NAME);
@@ -29,7 +31,9 @@ class GroupNameTest extends TestCase
         self::assertEquals(self::FIRST_GROUP_NAME, $groupName->__toString());
     }
 
-    /** @test */
+    /**
+     * @test
+     */
     public function it_returns_a_new_value_object_if_modified(): void
     {
         $groupName = GroupName::fromString(self::FIRST_GROUP_NAME);
@@ -40,7 +44,9 @@ class GroupNameTest extends TestCase
         self::assertEquals(self::SECOND_GROUP_NAME, $groupName->name());
     }
 
-    /** @test */
+    /**
+     * @test
+     */
     public function it_can_be_compared(): void
     {
         $first = GroupName::fromString(self::FIRST_GROUP_NAME);

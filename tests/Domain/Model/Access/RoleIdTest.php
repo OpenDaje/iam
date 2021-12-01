@@ -18,7 +18,9 @@ class RoleIdTest extends TestCase
 
     private const COPY_OF_FIRST_UUID = 'ade9885e-cd39-422e-8d13-a4edbc0eb245';
 
-    /** @test */
+    /**
+     * @test
+     */
     public function it_can_generate_a_RoleId(): void
     {
         $roleId = RoleId::generate();
@@ -28,7 +30,9 @@ class RoleIdTest extends TestCase
         $this->assertNotEmpty($roleId->toString());
     }
 
-    /** @test */
+    /**
+     * @test
+     */
     public function it_can_generate_a_RoleId_from_string(): void
     {
         $roleId = RoleId::fromString(self::FIRST_UUID);

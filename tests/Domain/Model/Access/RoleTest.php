@@ -29,7 +29,9 @@ class RoleTest extends TestCase
         $this->role = new Role(RoleId::fromString(self::FIRST_UUID), RoleName::fromString(self::FIRST_ROLE_NAME));
     }
 
-    /** @test */
+    /**
+     * @test
+     */
     public function it_can_create_a_Role(): void
     {
         $role = new Role(RoleId::fromString(self::FIRST_UUID), RoleName::fromString(self::FIRST_ROLE_NAME));
@@ -39,7 +41,9 @@ class RoleTest extends TestCase
         self::assertEquals(self::FIRST_ROLE_NAME, $role->name()->toString());
     }
 
-    /** @test */
+    /**
+     * @test
+     */
     public function it_can_change_name(): void
     {
         $this->role->withName(RoleName::fromString('ROLE_OTHER'));
@@ -47,7 +51,9 @@ class RoleTest extends TestCase
         self::assertEquals('ROLE_OTHER', $this->role->name()->toString());
     }
 
-    /** @test */
+    /**
+     * @test
+     */
     public function it_can_change_description(): void
     {
         $this->role->withDescription('new description');
@@ -55,7 +61,9 @@ class RoleTest extends TestCase
         self::assertEquals('new description', $this->role->description());
     }
 
-    /** @test */
+    /**
+     * @test
+     */
     public function it_can_be_compared(): void
     {
         $first = new Role(RoleId::fromString(self::FIRST_UUID), RoleName::fromString(self::FIRST_ROLE_NAME));

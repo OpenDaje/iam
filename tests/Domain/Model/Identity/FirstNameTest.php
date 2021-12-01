@@ -18,7 +18,9 @@ class FirstNameTest extends TestCase
 
     private const COPY_OF_FIRST_NAME = 'joe';
 
-    /** @test */
+    /**
+     * @test
+     */
     public function it_can_generate_a_FirstName_from_string(): void
     {
         $firstName = FirstName::fromString(self::FIRST_FIRST_NAME);
@@ -29,7 +31,9 @@ class FirstNameTest extends TestCase
         self::assertEquals(self::FIRST_FIRST_NAME, $firstName->__toString());
     }
 
-    /** @test */
+    /**
+     * @test
+     */
     public function it_returns_a_new_value_object_if_modified(): void
     {
         $firstName = FirstName::fromString(self::FIRST_FIRST_NAME);
@@ -40,7 +44,9 @@ class FirstNameTest extends TestCase
         self::assertNotEquals($newFirstName->firstName(), $firstName->firstName());
     }
 
-    /** @test */
+    /**
+     * @test
+     */
     public function it_can_be_compared(): void
     {
         $first = FirstName::fromString(self::FIRST_FIRST_NAME);

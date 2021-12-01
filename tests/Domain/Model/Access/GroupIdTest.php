@@ -18,7 +18,9 @@ class GroupIdTest extends TestCase
 
     private const COPY_OF_FIRST_UUID = 'ade9885e-cd39-422e-8d13-a4edbc0eb245';
 
-    /** @test */
+    /**
+     * @test
+     */
     public function it_can_generate_a_GroupId(): void
     {
         $groupId = GroupId::generate();
@@ -28,7 +30,9 @@ class GroupIdTest extends TestCase
         $this->assertNotEmpty($groupId->toString());
     }
 
-    /** @test */
+    /**
+     * @test
+     */
     public function it_can_generate_a_GroupId_from_string(): void
     {
         $groupId = GroupId::fromString(self::FIRST_UUID);

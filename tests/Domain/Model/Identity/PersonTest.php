@@ -22,7 +22,9 @@ class PersonTest extends TestCase
 
     private const FIXTURE_LASTNAME = 'doe';
 
-    /** @test */
+    /**
+     * @test
+     */
     public function it_can_create_Person(): void
     {
         $userId = UserId::fromString(self::USER_UUID);
@@ -38,7 +40,9 @@ class PersonTest extends TestCase
         self::assertEquals($fullName, $SUT->name());
     }
 
-    /** @test */
+    /**
+     * @test
+     */
     public function it_can_change_name(): void
     {
         $userId = UserId::fromString(self::USER_UUID);
@@ -59,7 +63,9 @@ class PersonTest extends TestCase
         //self::assertEquals($fullName, $SUT->name());
     }
 
-    /** @test */
+    /**
+     * @test
+     */
     public function it_can_change_userId(): void
     {
         $userId = UserId::fromString(self::USER_UUID);
@@ -78,7 +84,9 @@ class PersonTest extends TestCase
         self::assertEquals($otherUserId, $SUT->userId());
     }
 
-    /** @test */
+    /**
+     * @test
+     */
     public function it_can_compare_Person_by_identity(): void
     {
         $firstId = UserId::generate();

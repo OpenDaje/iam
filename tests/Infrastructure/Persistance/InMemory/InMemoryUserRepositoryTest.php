@@ -25,7 +25,9 @@ class InMemoryUserRepositoryTest extends TestCase
         $this->repository = new InMemoryUserRepository();
     }
 
-    /** @test */
+    /**
+     * @test
+     */
     public function it_can_create(): void
     {
         self::assertInstanceOf(InMemoryUserRepository::class, $this->repository);
@@ -47,7 +49,9 @@ class InMemoryUserRepositoryTest extends TestCase
         );
     }
 
-    /** @test */
+    /**
+     * @test
+     */
     public function it_can_store_user(): void
     {
         $user = $this->defaultUser();
@@ -57,7 +61,9 @@ class InMemoryUserRepositoryTest extends TestCase
         self::assertInstanceOf(User::class, $this->repository->ofId($user->userId()));
     }
 
-    /** @test */
+    /**
+     * @test
+     */
     public function it_can_retrieve_user_by_userId(): void
     {
         $user = $this->defaultUser();

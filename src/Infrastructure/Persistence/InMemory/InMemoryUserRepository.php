@@ -12,12 +12,11 @@ use OpenDaje\IdentityAccess\Domain\Model\Identity\UserRepositoryInterface;
 
 class InMemoryUserRepository implements UserRepositoryInterface
 {
-    /** @var Collection */
+    /**
+     * @var Collection
+     */
     private $users;
 
-    /**
-     * InMemoryUserRepository constructor.
-     */
     public function __construct()
     {
         $this->users = new arrayCollection();

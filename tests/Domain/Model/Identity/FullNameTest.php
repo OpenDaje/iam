@@ -26,7 +26,9 @@ class FullNameTest extends TestCase
 
     private const COPY_OF_FIRST_LAST_NAME = 'obama';
 
-    /** @test */
+    /**
+     * @test
+     */
     public function it_can_create_a_FullName(): void
     {
         $firstName = FirstName::fromString(self::FIRST_FIRST_NAME);
@@ -39,7 +41,9 @@ class FullNameTest extends TestCase
         self::assertEquals(self::FIRST_LAST_NAME, $fullName->lastName()->toString());
     }
 
-    /** @test */
+    /**
+     * @test
+     */
     public function it_returns_a_new_value_object_when_first_name_is_modified(): void
     {
         $firstName = FirstName::fromString(self::FIRST_FIRST_NAME);
@@ -54,7 +58,9 @@ class FullNameTest extends TestCase
         self::assertEquals($newFullName->firstName()->toString(), $newFirstName->toString());
     }
 
-    /** @test */
+    /**
+     * @test
+     */
     public function it_returns_a_new_value_object_when_last_name_is_modified(): void
     {
         $firstName = FirstName::fromString(self::FIRST_FIRST_NAME);
@@ -69,7 +75,9 @@ class FullNameTest extends TestCase
         self::assertEquals($newFullName->lastName()->toString(), $newLastName->toString());
     }
 
-    /** @test */
+    /**
+     * @test
+     */
     public function it_can_be_compared(): void
     {
         $first = new FullName(

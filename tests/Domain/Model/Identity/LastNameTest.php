@@ -18,7 +18,9 @@ class LastNameTest extends TestCase
 
     private const COPY_OF_FIRST_LAST_NAME = 'obama';
 
-    /** @test */
+    /**
+     * @test
+     */
     public function it_can_generate_a_LastName_from_string(): void
     {
         $lastName = LastName::fromString(self::FIRST_LAST_NAME);
@@ -29,7 +31,9 @@ class LastNameTest extends TestCase
         self::assertEquals(self::FIRST_LAST_NAME, $lastName->__toString());
     }
 
-    /** @test */
+    /**
+     * @test
+     */
     public function it_returns_a_new_value_object_if_modified(): void
     {
         $lastName = LastName::fromString(self::FIRST_LAST_NAME);
@@ -40,7 +44,9 @@ class LastNameTest extends TestCase
         self::assertNotEquals($newLastName->lastName(), $lastName->lastName());
     }
 
-    /** @test */
+    /**
+     * @test
+     */
     public function it_can_be_compared(): void
     {
         $first = LastName::fromString(self::FIRST_LAST_NAME);

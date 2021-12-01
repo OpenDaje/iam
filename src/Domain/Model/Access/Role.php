@@ -10,7 +10,9 @@ final class Role
 
     private $name;
 
-    /** @var null|string */
+    /**
+     * @var null|string
+     */
     private $description;
 
     public function __construct(RoleId $roleId, RoleName $name)

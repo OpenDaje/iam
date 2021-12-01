@@ -6,7 +6,9 @@ namespace OpenDaje\IdentityAccess\Domain\Model\Access;
 
 final class RoleName
 {
-    /** @var string */
+    /**
+     * @var string
+     */
     private $roleName;
 
     public function __construct(string $roleName)

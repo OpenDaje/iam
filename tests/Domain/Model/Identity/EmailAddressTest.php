@@ -18,7 +18,9 @@ class EmailAddressTest extends TestCase
 
     private const THIRD_EMAIL = 'third@example.com';
 
-    /** @test */
+    /**
+     * @test
+     */
     public function it_can_create_EmailAddress_from_string(): void
     {
         $email = EmailAddress::fromString(self::FIRST_EMAIL);
@@ -30,7 +32,9 @@ class EmailAddressTest extends TestCase
         $this->assertSame(self::FIRST_EMAIL, $email->email());
     }
 
-    /** @test */
+    /**
+     * @test
+     */
     public function it_can_return_new_VO_when_modify_email(): void
     {
         $email = EmailAddress::fromString(self::FIRST_EMAIL);
