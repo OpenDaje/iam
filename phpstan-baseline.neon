@@ -76,36 +76,6 @@ parameters:
 			path: src/Infrastructure/Persistence/InMemory/InMemoryUserRepository.php
 
 		-
-			message: "#^Method OpenDaje\\\\IdentityAccess\\\\Tests\\\\Domain\\\\Model\\\\Access\\\\GroupNameTest\\:\\:short_group_name_should_throw_exception\\(\\) has no return type specified\\.$#"
-			count: 1
-			path: tests/Domain/Model/Access/GroupNameTest.php
-
-		-
-			message: "#^Method OpenDaje\\\\IdentityAccess\\\\Tests\\\\Domain\\\\Model\\\\Access\\\\RoleTest\\:\\:it_can_be_compared\\(\\) has no return type specified\\.$#"
-			count: 1
-			path: tests/Domain/Model/Access/RoleTest.php
-
-		-
-			message: "#^Method OpenDaje\\\\IdentityAccess\\\\Tests\\\\Domain\\\\Model\\\\Access\\\\RoleTest\\:\\:it_can_change_description\\(\\) has no return type specified\\.$#"
-			count: 1
-			path: tests/Domain/Model/Access/RoleTest.php
-
-		-
-			message: "#^Method OpenDaje\\\\IdentityAccess\\\\Tests\\\\Domain\\\\Model\\\\Access\\\\RoleTest\\:\\:it_can_change_name\\(\\) has no return type specified\\.$#"
-			count: 1
-			path: tests/Domain/Model/Access/RoleTest.php
-
-		-
-			message: "#^Method OpenDaje\\\\IdentityAccess\\\\Tests\\\\Domain\\\\Model\\\\Access\\\\RoleTest\\:\\:it_can_create_a_Role\\(\\) has no return type specified\\.$#"
-			count: 1
-			path: tests/Domain/Model/Access/RoleTest.php
-
-		-
-			message: "#^Method OpenDaje\\\\IdentityAccess\\\\Tests\\\\Domain\\\\Model\\\\Access\\\\RoleTest\\:\\:setUp\\(\\) has no return type specified\\.$#"
-			count: 1
-			path: tests/Domain/Model/Access/RoleTest.php
-
-		-
 			message: "#^Property OpenDaje\\\\IdentityAccess\\\\Tests\\\\Domain\\\\Model\\\\Access\\\\RoleTest\\:\\:\\$role has no type specified\\.$#"
 			count: 1
 			path: tests/Domain/Model/Access/RoleTest.php
@@ -136,16 +106,6 @@ parameters:
 			path: tests/Domain/Model/Identity/UserTest.php
 
 		-
-			message: "#^Method OpenDaje\\\\IdentityAccess\\\\Tests\\\\Domain\\\\Model\\\\Identity\\\\UserTest\\:\\:setUp\\(\\) has no return type specified\\.$#"
-			count: 1
-			path: tests/Domain/Model/Identity/UserTest.php
-
-		-
-			message: "#^Method OpenDaje\\\\IdentityAccess\\\\Tests\\\\Domain\\\\Model\\\\Identity\\\\UserTest\\:\\:tearDown\\(\\) has no return type specified\\.$#"
-			count: 1
-			path: tests/Domain/Model/Identity/UserTest.php
-
-		-
 			message: "#^Property OpenDaje\\\\IdentityAccess\\\\Tests\\\\Domain\\\\Model\\\\Identity\\\\UserTest\\:\\:\\$defaulUser has no type specified\\.$#"
 			count: 1
 			path: tests/Domain/Model/Identity/UserTest.php
@@ -154,16 +114,6 @@ parameters:
 			message: "#^Property OpenDaje\\\\IdentityAccess\\\\Tests\\\\Domain\\\\Model\\\\Identity\\\\UserTest\\:\\:\\$userId has no type specified\\.$#"
 			count: 1
 			path: tests/Domain/Model/Identity/UserTest.php
-
-		-
-			message: "#^Method OpenDaje\\\\IdentityAccess\\\\Tests\\\\Infrastructure\\\\Persistance\\\\InMemory\\\\InMemoryUserRepositoryTest\\:\\:setUp\\(\\) has no return type specified\\.$#"
-			count: 1
-			path: tests/Infrastructure/Persistance/InMemory/InMemoryUserRepositoryTest.php
-
-		-
-			message: "#^Method OpenDaje\\\\IdentityAccess\\\\Tests\\\\Infrastructure\\\\Persistance\\\\InMemory\\\\InMemoryUserRepositoryTest\\:\\:tearDown\\(\\) has no return type specified\\.$#"
-			count: 1
-			path: tests/Infrastructure/Persistance/InMemory/InMemoryUserRepositoryTest.php
 
 		-
 			message: "#^Property OpenDaje\\\\IdentityAccess\\\\Tests\\\\Infrastructure\\\\Persistance\\\\InMemory\\\\InMemoryUserRepositoryTest\\:\\:\\$repository has no type specified\\.$#"

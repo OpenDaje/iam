@@ -21,14 +21,14 @@ class RoleTest extends TestCase
 
     private $role;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
         $this->role = new Role(RoleId::fromString(self::FIRST_UUID), RoleName::fromString(self::FIRST_ROLE_NAME));
     }
 
     /** @test */
-    public function it_can_create_a_Role()
+    public function it_can_create_a_Role(): void
     {
         $role = new Role(RoleId::fromString(self::FIRST_UUID), RoleName::fromString(self::FIRST_ROLE_NAME));
 
@@ -38,7 +38,7 @@ class RoleTest extends TestCase
     }
 
     /** @test */
-    public function it_can_change_name()
+    public function it_can_change_name(): void
     {
         $this->role->withName(RoleName::fromString('ROLE_OTHER'));
 
@@ -46,7 +46,7 @@ class RoleTest extends TestCase
     }
 
     /** @test */
-    public function it_can_change_description()
+    public function it_can_change_description(): void
     {
         $this->role->withDescription('new description');
 
@@ -54,7 +54,7 @@ class RoleTest extends TestCase
     }
 
     /** @test */
-    public function it_can_be_compared()
+    public function it_can_be_compared(): void
     {
         $first = new Role(RoleId::fromString(self::FIRST_UUID), RoleName::fromString(self::FIRST_ROLE_NAME));
         $second = new Role(RoleId::fromString(self::SECOND_UUID), RoleName::fromString('ROLE_SECOND'));

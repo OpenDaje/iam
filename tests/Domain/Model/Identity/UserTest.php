@@ -22,7 +22,7 @@ class UserTest extends TestCase
     private $userId;
     private $defaulUser;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
 
@@ -85,7 +85,7 @@ class UserTest extends TestCase
         self::assertEquals($name, $this->defaulUser->person()->name());
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         parent::tearDown();
         $this->userId = null;

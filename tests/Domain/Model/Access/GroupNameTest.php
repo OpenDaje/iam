@@ -63,7 +63,7 @@ class GroupNameTest extends TestCase
      * @test
      * @expectedException \InvalidArgumentException
      */
-    public function short_group_name_should_throw_exception()
+    public function short_group_name_should_throw_exception(): void
     {
         GroupName::fromString('acme');
     }
