@@ -13,6 +13,9 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         __DIR__ . '/src',
         __DIR__ . '/tests',
     ]);
+    $parameters->set(Option::SKIP, [
+        __DIR__ . '/var',
+    ]);
 
     $services = $containerConfigurator->services();
     $services->set(ArraySyntaxFixer::class)
@@ -21,8 +24,8 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         ]]);
 
     // run and fix, one by one
+    $containerConfigurator->import(SetList::ARRAY);
     // $containerConfigurator->import(SetList::SPACES);
-    // $containerConfigurator->import(SetList::ARRAY);
     // $containerConfigurator->import(SetList::DOCBLOCK);
     // $containerConfigurator->import(SetList::PSR_12);
 };
