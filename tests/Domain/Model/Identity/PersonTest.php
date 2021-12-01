@@ -16,9 +16,11 @@ use PHPUnit\Framework\TestCase;
  */
 class PersonTest extends TestCase
 {
-    private const USER_UUID         = 'dc97e157-a0fa-478a-8ade-5692bbaa08e0';
-    private const FIXTURE_NAME      = 'joe';
-    private const FIXTURE_LASTNAME  = 'doe';
+    private const USER_UUID = 'dc97e157-a0fa-478a-8ade-5692bbaa08e0';
+
+    private const FIXTURE_NAME = 'joe';
+
+    private const FIXTURE_LASTNAME = 'doe';
 
     /** @test */
     public function it_can_create_Person(): void

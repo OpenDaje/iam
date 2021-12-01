@@ -12,9 +12,11 @@ use PHPUnit\Framework\TestCase;
  */
 class UserIdTest extends TestCase
 {
-    private const FIRST_UUID    = 'dc97e157-a0fa-478a-8ade-5692bbaa08e0';
-    private const SECOND_UUID   = 'dc97e157-a0fa-478a-8ade-5692bbaa08e0'; // EQUAL TO THE FIRST
-    private const THIRD_UUID    = 'cc97e157-a0fa-478a-8ade-5692bbaa08e0';
+    private const FIRST_UUID = 'dc97e157-a0fa-478a-8ade-5692bbaa08e0';
+
+    private const SECOND_UUID = 'dc97e157-a0fa-478a-8ade-5692bbaa08e0'; // EQUAL TO THE FIRST
+
+    private const THIRD_UUID = 'cc97e157-a0fa-478a-8ade-5692bbaa08e0';
 
     /** @test */
     public function it_can_autogenerate_a_UserId(): void

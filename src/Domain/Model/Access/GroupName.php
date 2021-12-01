@@ -6,7 +6,7 @@ namespace OpenDaje\IdentityAccess\Domain\Model\Access;
 
 final class GroupName
 {
-    /** @var string  */
+    /** @var string */
     private $name;
 
     public function __construct(string $name)

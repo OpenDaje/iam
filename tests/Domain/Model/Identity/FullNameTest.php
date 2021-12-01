@@ -14,12 +14,17 @@ use PHPUnit\Framework\TestCase;
  */
 class FullNameTest extends TestCase
 {
-    private const FIRST_FIRST_NAME      = 'joe';
-    private const SECOND_FIRST_NAME     = 'jane';
-    private const COPY_OF_FIRST_NAME    = 'joe';
-    private const FIRST_LAST_NAME           = 'obama';
-    private const SECOND_LAST_NAME          = 'nixon';
-    private const COPY_OF_FIRST_LAST_NAME   = 'obama';
+    private const FIRST_FIRST_NAME = 'joe';
+
+    private const SECOND_FIRST_NAME = 'jane';
+
+    private const COPY_OF_FIRST_NAME = 'joe';
+
+    private const FIRST_LAST_NAME = 'obama';
+
+    private const SECOND_LAST_NAME = 'nixon';
+
+    private const COPY_OF_FIRST_LAST_NAME = 'obama';
 
     /** @test */
     public function it_can_create_a_FullName(): void

@@ -12,9 +12,11 @@ use PHPUnit\Framework\TestCase;
  */
 class RoleIdTest extends TestCase
 {
-    private const FIRST_UUID    = 'ade9885e-cd39-422e-8d13-a4edbc0eb245';
-    private const SECOND_UUID   = 'f2bfb4e2-b639-4e79-b546-5322dd03675d';
-    private const COPY_OF_FIRST_UUID    = 'ade9885e-cd39-422e-8d13-a4edbc0eb245';
+    private const FIRST_UUID = 'ade9885e-cd39-422e-8d13-a4edbc0eb245';
+
+    private const SECOND_UUID = 'f2bfb4e2-b639-4e79-b546-5322dd03675d';
+
+    private const COPY_OF_FIRST_UUID = 'ade9885e-cd39-422e-8d13-a4edbc0eb245';
 
     /** @test */
     public function it_can_generate_a_RoleId(): void

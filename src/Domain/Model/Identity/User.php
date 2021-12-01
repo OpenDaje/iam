@@ -7,8 +7,11 @@ namespace OpenDaje\IdentityAccess\Domain\Model\Identity;
 class User
 {
     private $userId;
+
     private $email;
+
     private $password;
+
     private $person;
 
     public function __construct(UserId $userId, EmailAddress $email, string $password, Person $person)

@@ -12,9 +12,11 @@ use PHPUnit\Framework\TestCase;
  */
 class GroupNameTest extends TestCase
 {
-    private const FIRST_GROUP_NAME            = 'CUSTOMERS';
-    private const SECOND_GROUP_NAME           = 'SALES';
-    private const COPY_OF_FIRST_GROUP_NAME    = 'CUSTOMERS';
+    private const FIRST_GROUP_NAME = 'CUSTOMERS';
+
+    private const SECOND_GROUP_NAME = 'SALES';
+
+    private const COPY_OF_FIRST_GROUP_NAME = 'CUSTOMERS';
 
     /** @test */
     public function it_can_generate_GroupName_from_string(): void

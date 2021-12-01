@@ -33,7 +33,7 @@ class InMemoryUserRepositoryTest extends TestCase
 
     private function defaultUser(): User
     {
-        return  new User(
+        return new User(
             $userId = UserId::generate(),
             $email = EmailAddress::fromString('irrelevant@example.com'),
             $password = 'irrelevant-password',

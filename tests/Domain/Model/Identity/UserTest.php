@@ -15,9 +15,10 @@ use PHPUnit\Framework\TestCase;
 
 class UserTest extends TestCase
 {
-    private const FIRST_UUID    = 'dc97e157-a0fa-478a-8ade-5692bbaa08e0';
+    private const FIRST_UUID = 'dc97e157-a0fa-478a-8ade-5692bbaa08e0';
 
     private $userId;
+
     private $defaulUser;
 
     protected function setUp(): void

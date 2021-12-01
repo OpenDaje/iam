@@ -12,9 +12,11 @@ use PHPUnit\Framework\TestCase;
  */
 class LastNameTest extends TestCase
 {
-    private const FIRST_LAST_NAME           = 'obama';
-    private const SECOND_LAST_NAME          = 'nixon';
-    private const COPY_OF_FIRST_LAST_NAME   = 'obama';
+    private const FIRST_LAST_NAME = 'obama';
+
+    private const SECOND_LAST_NAME = 'nixon';
+
+    private const COPY_OF_FIRST_LAST_NAME = 'obama';
 
     /** @test */
     public function it_can_generate_a_LastName_from_string(): void

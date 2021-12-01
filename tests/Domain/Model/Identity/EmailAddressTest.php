@@ -12,9 +12,11 @@ use PHPUnit\Framework\TestCase;
  */
 class EmailAddressTest extends TestCase
 {
-    private const FIRST_EMAIL   = 'first@example.com';
-    private const SECOND_EMAIL  = 'first@example.com'; // EQUAL TO THE FIRST
-    private const THIRD_EMAIL   = 'third@example.com';
+    private const FIRST_EMAIL = 'first@example.com';
+
+    private const SECOND_EMAIL = 'first@example.com'; // EQUAL TO THE FIRST
+
+    private const THIRD_EMAIL = 'third@example.com';
 
     /** @test */
     public function it_can_create_EmailAddress_from_string(): void

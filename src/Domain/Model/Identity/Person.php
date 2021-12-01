@@ -7,6 +7,7 @@ namespace OpenDaje\IdentityAccess\Domain\Model\Identity;
 final class Person
 {
     private $userId;
+
     private $name;
 
     public function __construct(UserId $userId, FullName $name)

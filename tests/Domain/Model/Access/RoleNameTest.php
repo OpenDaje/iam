@@ -12,9 +12,11 @@ use PHPUnit\Framework\TestCase;
  */
 class RoleNameTest extends TestCase
 {
-    private const FIRST_ROLE_NAME            = 'ROLE_USER';
-    private const SECOND_ROLE_NAME           = 'ROLE_CUSTOMER';
-    private const COPY_OF_FIRST_ROLE_NAME    = 'ROLE_USER';
+    private const FIRST_ROLE_NAME = 'ROLE_USER';
+
+    private const SECOND_ROLE_NAME = 'ROLE_CUSTOMER';
+
+    private const COPY_OF_FIRST_ROLE_NAME = 'ROLE_USER';
 
     /** @test */
     public function it_can_generate_RoleName_from_string(): void

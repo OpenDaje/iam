@@ -6,12 +6,12 @@ namespace OpenDaje\IdentityAccess\Domain\Model\Identity;
 
 final class FirstName
 {
-    /** @var string  */
+    /** @var string */
     private $firstName;
 
     public function __construct(string $firstName)
     {
-        if (!$firstName) {
+        if (! $firstName) {
             throw new \InvalidArgumentException('Firstname missing.');
         }
         $this->firstName = $firstName;

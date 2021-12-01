@@ -12,7 +12,7 @@ use OpenDaje\IdentityAccess\Domain\Model\Identity\UserRepositoryInterface;
 
 class InMemoryUserRepository implements UserRepositoryInterface
 {
-    /** @var Collection  */
+    /** @var Collection */
     private $users;
 
     /**

@@ -6,12 +6,12 @@ namespace OpenDaje\IdentityAccess\Domain\Model\Identity;
 
 final class EmailAddress
 {
-    /** @var string  */
+    /** @var string */
     private $email;
 
     public function __construct(string $email)
     {
-        if (!$email) {
+        if (! $email) {
             throw new \InvalidArgumentException('Email missing.');
         }
         $this->email = $this->sanitize($email);

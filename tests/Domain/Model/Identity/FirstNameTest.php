@@ -12,9 +12,11 @@ use PHPUnit\Framework\TestCase;
  */
 class FirstNameTest extends TestCase
 {
-    private const FIRST_FIRST_NAME      = 'joe';
-    private const SECOND_FIRST_NAME     = 'jane';
-    private const COPY_OF_FIRST_NAME    = 'joe';
+    private const FIRST_FIRST_NAME = 'joe';
+
+    private const SECOND_FIRST_NAME = 'jane';
+
+    private const COPY_OF_FIRST_NAME = 'joe';
 
     /** @test */
     public function it_can_generate_a_FirstName_from_string(): void
