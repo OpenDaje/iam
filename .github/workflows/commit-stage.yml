@@ -177,7 +177,9 @@ jobs:
           restore-keys: ${{ runner.os }}-${{ matrix.php }}-composer-
 
       - name: Install Composer dependencies
-        run: composer install --prefer-dist --no-progress --no-scripts --ansi
+        run: |
+          composer install --prefer-dist --no-progress --no-scripts --ansi
+          composer bin phpstan install
 
 #      - name: Cache PHPStan results
 #        uses: actions/cache@v2
