@@ -16,16 +16,12 @@ use PHPUnit\Framework\TestCase;
 class UserTest extends TestCase
 {
     private const FIRST_UUID    = 'dc97e157-a0fa-478a-8ade-5692bbaa08e0';
-    private const SECOND_UUID   = 'dc97e157-a0fa-478a-8ade-5692bbaa08e0'; // EQUAL TO THE FIRST
-    private const THIRD_UUID    = 'cc97e157-a0fa-478a-8ade-5692bbaa08e0';
 
     private $userId;
     private $defaulUser;
 
     protected function setUp(): void
     {
-        parent::setUp();
-
         $this->userId = UserId::generate();
         $this->defaulUser = new User(
             $this->userId,
@@ -87,7 +83,6 @@ class UserTest extends TestCase
 
     public function tearDown(): void
     {
-        parent::tearDown();
         $this->userId = null;
         $this->defaulUser = null;
     }

@@ -23,7 +23,6 @@ class RoleTest extends TestCase
 
     protected function setUp(): void
     {
-        parent::setUp();
         $this->role = new Role(RoleId::fromString(self::FIRST_UUID), RoleName::fromString(self::FIRST_ROLE_NAME));
     }
 
