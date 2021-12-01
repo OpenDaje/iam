@@ -16,13 +16,11 @@ code-analyse:
 	./vendor/bin/phpstan analyse
 
 cs-fix:
-	./vendor/bin/php-cs-fixer fix src/ --verbose
-	./vendor/bin/php-cs-fixer fix tests/ --verbose
+	./vendor/bin/ecs --fix
 
 
 cs-check:
-	./vendor/bin/php-cs-fixer fix src/ --dry-run --verbose
-	./vendor/bin/php-cs-fixer fix tests/ --dry-run --verbose
+	./vendor/bin/ecs
 
 pre-commit:
 	$(MAKE) cs-check
