@@ -96,16 +96,6 @@ parameters:
 			path: tests/Domain/Model/Identity/EmailAddressTest.php
 
 		-
-			message: "#^Constant OpenDaje\\\\IdentityAccess\\\\Tests\\\\Domain\\\\Model\\\\Identity\\\\UserTest\\:\\:SECOND_UUID is unused\\.$#"
-			count: 1
-			path: tests/Domain/Model/Identity/UserTest.php
-
-		-
-			message: "#^Constant OpenDaje\\\\IdentityAccess\\\\Tests\\\\Domain\\\\Model\\\\Identity\\\\UserTest\\:\\:THIRD_UUID is unused\\.$#"
-			count: 1
-			path: tests/Domain/Model/Identity/UserTest.php
-
-		-
 			message: "#^Property OpenDaje\\\\IdentityAccess\\\\Tests\\\\Domain\\\\Model\\\\Identity\\\\UserTest\\:\\:\\$defaulUser has no type specified\\.$#"
 			count: 1
 			path: tests/Domain/Model/Identity/UserTest.php
