@@ -127,7 +127,7 @@ jobs:
       - name: Cache ECS results
         uses: actions/cache@v2
         with:
-          path: /tmp/ecs
+          path: var/cache/ecs
           key: ecs-php${{ matrix.php }}-${{ github.sha }}
           restore-keys: |
             phpstan-php${{ matrix.php }}-
