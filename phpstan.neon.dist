@@ -12,6 +12,9 @@ parameters:
         - tests
 
 
+    tmpDir: var/cache/phpstan
+
+
     ignoreErrors:
 
 
