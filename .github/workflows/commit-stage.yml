@@ -191,15 +191,15 @@ jobs:
           composer install --prefer-dist --no-progress --no-scripts --ansi
           composer bin phpstan install
 
-#      - name: Cache PHPStan results
-#        uses: actions/cache@v2
-#        with:
-#          path: /tmp/phpstan
-#          key: phpstan-php${{ matrix.php }}-${{ github.sha }}
-#          restore-keys: |
-#            phpstan-php${{ matrix.php }}-
-#            phpstan-
-#        continue-on-error: true
+      - name: Cache PHPStan results
+        uses: actions/cache@v2
+        with:
+          path: var/cache/phpstan
+          key: phpstan-php${{ matrix.php }}-${{ github.sha }}
+          restore-keys: |
+            phpstan-php${{ matrix.php }}-
+            phpstan-
+        continue-on-error: true
 
       - name: Run PHPStan analysis
         run: |
