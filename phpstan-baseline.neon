@@ -6,11 +6,6 @@ parameters:
 			path: src/Infrastructure/Persistence/InMemory/InMemoryUserRepository.php
 
 		-
-			message: "#^Property OpenDaje\\\\IdentityAccess\\\\Tests\\\\Domain\\\\Model\\\\Access\\\\RoleTest\\:\\:\\$role has no type specified\\.$#"
-			count: 1
-			path: tests/Domain/Model/Access/RoleTest.php
-
-		-
 			message: "#^Method OpenDaje\\\\IdentityAccess\\\\Tests\\\\Domain\\\\Model\\\\Identity\\\\EmailAddressTest\\:\\:it_should_sanitize_email\\(\\) has parameter \\$email with no type specified\\.$#"
 			count: 1
 			path: tests/Domain/Model/Identity/EmailAddressTest.php
@@ -24,19 +19,4 @@ parameters:
 			message: "#^Method OpenDaje\\\\IdentityAccess\\\\Tests\\\\Domain\\\\Model\\\\Identity\\\\EmailAddressTest\\:\\:sanitizedEmails\\(\\) return type has no value type specified in iterable type iterable\\.$#"
 			count: 1
 			path: tests/Domain/Model/Identity/EmailAddressTest.php
-
-		-
-			message: "#^Property OpenDaje\\\\IdentityAccess\\\\Tests\\\\Domain\\\\Model\\\\Identity\\\\UserTest\\:\\:\\$defaulUser has no type specified\\.$#"
-			count: 1
-			path: tests/Domain/Model/Identity/UserTest.php
-
-		-
-			message: "#^Property OpenDaje\\\\IdentityAccess\\\\Tests\\\\Domain\\\\Model\\\\Identity\\\\UserTest\\:\\:\\$userId has no type specified\\.$#"
-			count: 1
-			path: tests/Domain/Model/Identity/UserTest.php
-
-		-
-			message: "#^Property OpenDaje\\\\IdentityAccess\\\\Tests\\\\Infrastructure\\\\Persistance\\\\InMemory\\\\InMemoryUserRepositoryTest\\:\\:\\$repository has no type specified\\.$#"
-			count: 1
-			path: tests/Infrastructure/Persistance/InMemory/InMemoryUserRepositoryTest.php
 
