@@ -17,6 +17,9 @@ use PHPUnit\Framework\TestCase;
 /** @group unit */
 class InMemoryUserRepositoryTest extends TestCase
 {
+    /**
+     * @var InMemoryUserRepository|null
+     */
     private $repository;
 
     protected function setUp(): void

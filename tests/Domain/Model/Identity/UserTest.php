@@ -17,8 +17,14 @@ class UserTest extends TestCase
 {
     private const FIRST_UUID = 'dc97e157-a0fa-478a-8ade-5692bbaa08e0';
 
+    /**
+     * @var mixed|null
+     */
     private $userId;
 
+    /**
+     * @var User|null
+     */
     private $defaulUser;
 
     protected function setUp(): void

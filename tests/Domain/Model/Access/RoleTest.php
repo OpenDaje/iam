@@ -22,6 +22,9 @@ class RoleTest extends TestCase
 
     private const FIRST_ROLE_NAME = 'ROLE_USER';
 
+    /**
+     * @var Role|null
+     */
     private $role;
 
     protected function setUp(): void
