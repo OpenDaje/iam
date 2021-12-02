@@ -4,21 +4,27 @@ declare(strict_types=1);
 
 namespace OpenDaje\IdentityAccess\Domain\Model\Access;
 
+use Ramsey\Uuid\Uuid;
+use Ramsey\Uuid\UuidInterface;
+
 final class GroupId
 {
+    /**
+     * @var UuidInterface
+     */
     private $uuid;
 
     public static function generate(): GroupId
     {
-        return new self(\Ramsey\Uuid\Uuid::uuid4());
+        return new self(Uuid::uuid4());
     }
 
     public static function fromString(string $groupId): GroupId
     {
-        return new self(\Ramsey\Uuid\Uuid::fromString($groupId));
+        return new self(Uuid::fromString($groupId));
     }
 
-    private function __construct(\Ramsey\Uuid\UuidInterface $groupId)
+    private function __construct(UuidInterface $groupId)
     {
         $this->uuid = $groupId;
     }

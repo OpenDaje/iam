@@ -6,8 +6,14 @@ namespace OpenDaje\IdentityAccess\Domain\Model\Access;
 
 final class Role
 {
+    /**
+     * @var RoleId
+     */
     private $roleId;
 
+    /**
+     * @var RoleName
+     */
     private $name;
 
     /**
