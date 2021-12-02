@@ -4,21 +4,27 @@ declare(strict_types=1);
 
 namespace OpenDaje\IdentityAccess\Domain\Model\Identity;
 
+use Ramsey\Uuid\Uuid;
+use Ramsey\Uuid\UuidInterface;
+
 final class UserId
 {
+    /**
+     * @var UuidInterface
+     */
     private $uuid;
 
     public static function generate(): UserId
     {
-        return new self(\Ramsey\Uuid\Uuid::uuid4());
+        return new self(Uuid::uuid4());
     }
 
     public static function fromString(string $userId): UserId
     {
-        return new self(\Ramsey\Uuid\Uuid::fromString($userId));
+        return new self(Uuid::fromString($userId));
     }
 
-    private function __construct(\Ramsey\Uuid\UuidInterface $userId)
+    private function __construct(UuidInterface $userId)
     {
         $this->uuid = $userId;
     }

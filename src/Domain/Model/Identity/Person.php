@@ -6,8 +6,14 @@ namespace OpenDaje\IdentityAccess\Domain\Model\Identity;
 
 final class Person
 {
+    /**
+     * @var UserId
+     */
     private $userId;
 
+    /**
+     * @var FullName
+     */
     private $name;
 
     public function __construct(UserId $userId, FullName $name)

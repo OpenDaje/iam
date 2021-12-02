@@ -6,12 +6,24 @@ namespace OpenDaje\IdentityAccess\Domain\Model\Identity;
 
 class User
 {
+    /**
+     * @var UserId
+     */
     private $userId;
 
+    /**
+     * @var EmailAddress
+     */
     private $email;
 
+    /**
+     * @var string
+     */
     private $password;
 
+    /**
+     * @var Person
+     */
     private $person;
 
     public function __construct(UserId $userId, EmailAddress $email, string $password, Person $person)
