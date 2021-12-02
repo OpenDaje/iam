@@ -21,51 +21,6 @@ parameters:
 			path: src/Domain/Model/Access/RoleId.php
 
 		-
-			message: "#^Property OpenDaje\\\\IdentityAccess\\\\Domain\\\\Model\\\\Identity\\\\FullName\\:\\:\\$firstName has no type specified\\.$#"
-			count: 1
-			path: src/Domain/Model/Identity/FullName.php
-
-		-
-			message: "#^Property OpenDaje\\\\IdentityAccess\\\\Domain\\\\Model\\\\Identity\\\\FullName\\:\\:\\$lastName has no type specified\\.$#"
-			count: 1
-			path: src/Domain/Model/Identity/FullName.php
-
-		-
-			message: "#^Property OpenDaje\\\\IdentityAccess\\\\Domain\\\\Model\\\\Identity\\\\Person\\:\\:\\$name has no type specified\\.$#"
-			count: 1
-			path: src/Domain/Model/Identity/Person.php
-
-		-
-			message: "#^Property OpenDaje\\\\IdentityAccess\\\\Domain\\\\Model\\\\Identity\\\\Person\\:\\:\\$userId has no type specified\\.$#"
-			count: 1
-			path: src/Domain/Model/Identity/Person.php
-
-		-
-			message: "#^Property OpenDaje\\\\IdentityAccess\\\\Domain\\\\Model\\\\Identity\\\\User\\:\\:\\$email has no type specified\\.$#"
-			count: 1
-			path: src/Domain/Model/Identity/User.php
-
-		-
-			message: "#^Property OpenDaje\\\\IdentityAccess\\\\Domain\\\\Model\\\\Identity\\\\User\\:\\:\\$password has no type specified\\.$#"
-			count: 1
-			path: src/Domain/Model/Identity/User.php
-
-		-
-			message: "#^Property OpenDaje\\\\IdentityAccess\\\\Domain\\\\Model\\\\Identity\\\\User\\:\\:\\$person has no type specified\\.$#"
-			count: 1
-			path: src/Domain/Model/Identity/User.php
-
-		-
-			message: "#^Property OpenDaje\\\\IdentityAccess\\\\Domain\\\\Model\\\\Identity\\\\User\\:\\:\\$userId has no type specified\\.$#"
-			count: 1
-			path: src/Domain/Model/Identity/User.php
-
-		-
-			message: "#^Property OpenDaje\\\\IdentityAccess\\\\Domain\\\\Model\\\\Identity\\\\UserId\\:\\:\\$uuid has no type specified\\.$#"
-			count: 1
-			path: src/Domain/Model/Identity/UserId.php
-
-		-
 			message: "#^Property OpenDaje\\\\IdentityAccess\\\\Infrastructure\\\\Persistence\\\\InMemory\\\\InMemoryUserRepository\\:\\:\\$users with generic interface Doctrine\\\\Common\\\\Collections\\\\Collection does not specify its types\\: TKey, T$#"
 			count: 1
 			path: src/Infrastructure/Persistence/InMemory/InMemoryUserRepository.php
