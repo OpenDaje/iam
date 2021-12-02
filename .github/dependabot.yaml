@@ -17,7 +17,7 @@ updates:
 
 
   #
-  # Tools dependecy track
+  # Tools dependency track
   #
   - commit-message:
       include: "scope"
