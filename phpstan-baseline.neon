@@ -1,26 +1,6 @@
 parameters:
 	ignoreErrors:
 		-
-			message: "#^Property OpenDaje\\\\IdentityAccess\\\\Domain\\\\Model\\\\Access\\\\GroupId\\:\\:\\$uuid has no type specified\\.$#"
-			count: 1
-			path: src/Domain/Model/Access/GroupId.php
-
-		-
-			message: "#^Property OpenDaje\\\\IdentityAccess\\\\Domain\\\\Model\\\\Access\\\\Role\\:\\:\\$name has no type specified\\.$#"
-			count: 1
-			path: src/Domain/Model/Access/Role.php
-
-		-
-			message: "#^Property OpenDaje\\\\IdentityAccess\\\\Domain\\\\Model\\\\Access\\\\Role\\:\\:\\$roleId has no type specified\\.$#"
-			count: 1
-			path: src/Domain/Model/Access/Role.php
-
-		-
-			message: "#^Property OpenDaje\\\\IdentityAccess\\\\Domain\\\\Model\\\\Access\\\\RoleId\\:\\:\\$uuid has no type specified\\.$#"
-			count: 1
-			path: src/Domain/Model/Access/RoleId.php
-
-		-
 			message: "#^Property OpenDaje\\\\IdentityAccess\\\\Infrastructure\\\\Persistence\\\\InMemory\\\\InMemoryUserRepository\\:\\:\\$users with generic interface Doctrine\\\\Common\\\\Collections\\\\Collection does not specify its types\\: TKey, T$#"
 			count: 1
 			path: src/Infrastructure/Persistence/InMemory/InMemoryUserRepository.php
