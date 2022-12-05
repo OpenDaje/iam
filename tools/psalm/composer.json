@@ -1,6 +1,6 @@
 {
     "require-dev": {
-        "vimeo/psalm": "^4.13"
+        "vimeo/psalm": "^5.1"
     },
     "config": {
         "preferred-install": {
