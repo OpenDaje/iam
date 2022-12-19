@@ -4,25 +4,25 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f9bd7a77a8e8ea8b5eb915746898a96a",
+    "content-hash": "88ef3f11eaf2e1dba308bbcc368edaa9",
     "packages": [],
     "packages-dev": [
         {
             "name": "symplify/easy-coding-standard",
-            "version": "9.4.70",
+            "version": "11.1.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symplify/easy-coding-standard.git",
-                "reference": "9276b0c7a1a5671fc4a067656ab40d0aea42aaca"
+                "reference": "860b88c552af9682ad9715e8fa400916fa529e24"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symplify/easy-coding-standard/zipball/9276b0c7a1a5671fc4a067656ab40d0aea42aaca",
-                "reference": "9276b0c7a1a5671fc4a067656ab40d0aea42aaca",
+                "url": "https://api.github.com/repos/symplify/easy-coding-standard/zipball/860b88c552af9682ad9715e8fa400916fa529e24",
+                "reference": "860b88c552af9682ad9715e8fa400916fa529e24",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1"
+                "php": ">=7.2"
             },
             "conflict": {
                 "friendsofphp/php-cs-fixer": "<3.0",
@@ -34,7 +34,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "9.5-dev"
+                    "dev-main": "10.3-dev"
                 }
             },
             "autoload": {
@@ -48,7 +48,7 @@
             ],
             "description": "Prefixed scoped version of ECS package",
             "support": {
-                "source": "https://github.com/symplify/easy-coding-standard/tree/9.4.70"
+                "source": "https://github.com/symplify/easy-coding-standard/tree/11.1.20"
             },
             "funding": [
                 {
@@ -60,7 +60,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-10-02T16:09:04+00:00"
+            "time": "2022-12-19T12:28:29+00:00"
         }
     ],
     "aliases": [],
@@ -70,5 +70,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.3.0"
 }
